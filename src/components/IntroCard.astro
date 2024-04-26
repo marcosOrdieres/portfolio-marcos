@@ -1,0 +1,42 @@
+---
+import Card from "./Card/index.astro";
+import Button from "./Button.astro";
+import { CONTACT } from "../lib/constants";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+---
+
+<Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
+  <div class="flex w-full h-full">
+    <div class="flex flex-col justify-between md:max-h-[300px] gap-4">
+      <div class="flex flex-col h-full">
+        <h6 class="text-sm font-light m-0 text-gray-500">welcome</h6>
+        <p class="m-0 font-light text-xl">
+          Hi, I'm <b class="text-primary-500 animate-fadeFastIn"
+            >Marcos Rodriguez Ordieres</b
+          >, a Software Developer who produces high quality responsive
+          applications and websites with a exceptional user experience
+        </p>
+      </div>
+      <div class="flex gap-4">
+        {
+          CONTACT.map(({ title, icon, url }) => (
+            <a href={url} aria-label={`${icon} profile`} target="_blank">
+              <Button aria-label={`${icon} profile`}>
+                <Icon name={`mdi:${icon}`} class="h-6" />
+                <span class="sr-only">{title}</span>
+              </Button>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <Image
+      width="300"
+      height="300"
+      src="/images/marcos.png"
+      class="w-auto max-h-[300px] select-none absolute right-[-100px] bottom-[-70px] z-[-1] opacity-50 md:opacity-100 md:relative md:right-auto md:bottom-auto md:z-auto pointer-events-none"
+      alt="marcos photo"
+    />
+  </div>
+</Card>

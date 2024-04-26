@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card/index.astro";
+import IntroCard from "../components/IntroCard.astro";
+import ContactsCard from "../components/ContactsCard.astro";
+import MyProjects from "../components/MyProjects.astro";
+import AboutMe from "../components/AboutMe.astro";
+import RandomDesktop from "../components/RandomDesktop/RandomDesktop.astro";
+import Curriculum from "../components/Curriculum.astro";
+---
+
+<Layout
+  title="Marcos Rodriguez Ordieres - Front-end Developer"
+  description="I'm a  passionated developer based in Spain, happy to produce high quality responsive applications and websites with a exceptional user experience. My primary tools of choice include: TypeScript, JavaScript, React, Redux, Astro, React Native and Node.js."
+>
+  <main
+    class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-8 lg:grid-cols-4 lg:gap-4 lg:max-h-[800px]"
+  >
+    <IntroCard />
+    <AboutMe />
+    <ContactsCard />
+    <MyProjects />
+    <RandomDesktop />
+    <Curriculum />
+    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
+      <p class="text-xs">
+        © 2024 · Crafted with ♥️ using <a
+          href="https://astro.build/"
+          target="_blank">Astro</a
+        > by Marcos.
+      </p>
+    </Card>
+  </main>
+</Layout>

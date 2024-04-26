@@ -1,0 +1,19 @@
+---
+import Card from "./Card/index.astro";
+---
+
+<Card
+  href=`${Astro.url.origin}/resume_MarcosRodriguezOrdieres.pdf`
+  colSpan="md:col-span-1"
+  rowSpan="md:row-span-2"
+>
+  <div
+    class="w-full h-full flex flex-col items-center justify-center transition ease-in-out delay-150 hover:scale-300 hover:text-primary-500 duration-300"
+  >
+    <p
+      class="text-4xl font-bold bg-gradient-to-r from-transparent via-primary900 to-black text-transparent bg-clip-text bg-300% animate-gradient"
+    >
+      CV
+    </p>
+  </div>
+</Card>

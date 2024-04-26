@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon/components";
+import Button from "../Button.astro";
+import Card from "../Card/index.astro";
+import Tooltip from "../Tooltip/Tooltip.astro";
+import RandomDesktopS from "./RandomDesktopS.svelte";
+---
+
+<Card
+  height="sm:h-48 lg:h-auto"
+  href=""
+  colSpan="md:col-span-1"
+  rowSpan="md:row-span-2"
+>
+  <RandomDesktopS client:visible />
+  <Tooltip>
+    <Button aria-label="easter egg btn">
+      <Icon name="mdi:android" class="h-6" />
+    </Button>
+  </Tooltip>
+</Card>

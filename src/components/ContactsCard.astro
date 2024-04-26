@@ -1,0 +1,35 @@
+---
+import Card from "./Card/index.astro";
+import { EXPERIENCES } from "../lib/constants";
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-4">
+  <div class="h-full">
+    <header class="flex items-center">
+      <h1 class="text-white text-xl font-bold">Experience</h1>
+    </header>
+    <div class="flex flex-col mt-4 w-fit">
+      {
+        EXPERIENCES.map(({ date, url, employer }) => (
+          <div>
+            <h2 class="text-gray-500">{date}</h2>
+            <ul>
+              <li>
+                <a
+                  class="hover:text-primary-300 font-extrabold duration-300"
+                  target="_blank"
+                  href={url}
+                  rel="noopener noreferrer"
+                >
+                  {employer}
+                </a>
+              </li>
+            </ul>
+
+            <br />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Card>
